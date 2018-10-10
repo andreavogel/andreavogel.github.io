@@ -13,14 +13,11 @@ background: linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
     width: 300px;
     height: 300px;
-    border-radius: 20px;
-    margin: 20px;
-
-
 }
 
 body, * {
 box-sizing: border-box;
+    --favorite:red;
 }
 
 .clear {
@@ -28,14 +25,15 @@ box-sizing: border-box;
 }
 
 #wrapper {
-  background-color: grey;
+  background-color: var(--favorite, grey);
   max-width: 960px;
   margin: 0 auto;
 }
 
 header {
-  background-color: lightgrey;
+  background-color: var(--favorite, grey);
   height: 100px;
+  font-family: sans-serif;
 }
 
 nav {
@@ -44,20 +42,21 @@ nav {
 }
 
 footer {
-  background-color: lightgrey;
+  background-color: var(--favorite, grey);
   height: 100px;
 }
 
 aside{
   background-color: red;
   width: 300px;
-  min-height: 400px;
+  min-height: 474px;
   float: left;
 }
 
-section{
-  background-color: black;
+section {
+  background-color: lightgrey;
   width: 660px;
   min-height: 400px;
   float: left;
+  position: relative;
 }
