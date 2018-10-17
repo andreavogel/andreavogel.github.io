@@ -11,8 +11,6 @@ background: -moz-linear-gradient(top, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0
 background: -webkit-linear-gradient(top, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
-    width: 300px;
-    height: 300px;
     border-radius: 20px;
     margin: 20px;
 
@@ -34,13 +32,54 @@ box-sizing: border-box;
 }
 
 header {
+  font-family: Helvetica, sans-serif;
   background-color: lightgrey;
   height: 100px;
 }
 
 nav {
   background-color: lightblue;
-  height: 50px;
+  z-index=10;
+
+}
+
+nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .5s background-color;
+  border-bottom: 3px solid #888;
+}
+
+nav a:hover {
+  background-color:red;
+}
+
+nav a.active {
+  background-color: black;
+  cursor: default;
+}
+nav li li{
+  font-size: 1rem;
+  text-align: left;
+}
+
+nav li li a {
+  padding-left: 10px;
 }
 
 footer {
@@ -56,8 +95,68 @@ aside{
 }
 
 section{
-  background-color: black;
+  background-color: darkgrey;
   width: 660px;
   min-height: 400px;
   float: left;
+}
+
+img {
+  width: 600px;
+}
+@media (max-width: 767px) {
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  main {
+    width: 100%;
+
+  }
+  #wrapper {
+    max-width: 100%;
+
+  }
+    aside {
+      float: none;
+      width: 100%;
+    }
+    section {
+      float: none;
+      width: 100%;
+    }
+}
+
+@media (min-width:768px) {
+  nav li {
+    display: inline-block;
+    margin-right: -4px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    border-bottom: none;
+    width: 120px;
+  }
+  nav li ul {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  transition: .5s opacity;
+}
+
+nav a {
+  border-bottom: none;
+}
+nav li:hover ul {
+  display: block;
+  opacity: 1;
+}
+
+nav li ul li {
+  display: block;
+}
+
+
 }
