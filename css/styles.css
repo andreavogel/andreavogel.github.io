@@ -1,6 +1,7 @@
 h1 {
   color: red;
   font-family: sans-serif;
+
 }
 
 .gradient-box {
@@ -15,7 +16,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     width: 300px;
     height: 300px;
     border-radius: 20px;
-    margin: 20px;
+
 
 }
 
@@ -108,7 +109,7 @@ section {
 }
 
 img {
-  width: 600px;
+  width: 400px;
 }
 @media (max-width: 767px) {
 
@@ -152,6 +153,64 @@ img {
   height: 100px;
   margin-bottom: 10px;
 }
+
+.grow {
+  font-size: 24px;
+  transition-property: font-size;
+  transition-duration: 2s;
+  transition-delay: 0s;
+  -webkit-transform:translate3d(0,0,0);
+}
+
+.grow:hover {
+  font-size: 60px;
+}
+
+#delay {
+  font-size: 14px;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+  -webkit-transform:translate3d(0,0,0);
+}
+
+#delay:hover {
+  font-size: 36px;
+}
+
+.mybox {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 0;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: .5s;
+}
+
+.mybox:hover {
+  width: 300px;
+  border-radius: 100px;
+}
+
+.mybox2 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 0;
+  border-radius: 0;
+  background-color: red;
+  transition: all 2s ease-in-out .5s;
+}
+
+.mybox2:hover {
+  background-color: black;
+  height:200px;
+  left: 200px;
+  border-radius: 100px;
+}
+
 
 @media (min-width:768px) {
 
